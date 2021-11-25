@@ -178,8 +178,6 @@ private:
     HANDLE m_ProcessHandle;
     BYTE* m_ModuleBaseAddress;
     LPVOID m_PlayerEntityAddress;
-
-    friend class FPlayerEntity;
 };
 
 

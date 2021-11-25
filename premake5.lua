@@ -69,6 +69,8 @@ project "ACReader"
     basedir "Intermediate/ACReader"
     language "C++"
     cppdialect "C++17"
+    pchheader "pch.h"
+    pchsource "Source/ACReader/Private/pch.cpp"
 
     targetdir "Binaries/ACReader/%{cfg.buildcfg}"
     objdir "Build/ACReader/%{cfg.buildcfg}"

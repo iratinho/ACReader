@@ -1,5 +1,6 @@
-﻿#include "ACReader.h"
-#include <iostream>
+﻿#include "pch.h"
+#include "ACReader.h"
+#include "MemoryUtils.h"
 
 namespace EntityOffsets
 {

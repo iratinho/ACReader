@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Solution and IDE
+*.sln
+Intermediate/
+.idea/
+Binaries/
+Build/
+.vs/

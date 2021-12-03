@@ -4,7 +4,8 @@
 
 namespace EntityOffsets
 {
-    int PlayerEntity = 0x109B74;
+    int LocalPlayerEntity = 0x109B74;
+    int EntityPlayerList = 0x10F4F8; // Bots or Multiplayer
 }
 
 FPlayerEntity::FPlayerEntity(LPVOID DataAddress)
@@ -64,7 +65,7 @@ bool ACReader::Init()
     }
     
     // With the PlayerEntity offset lets grab the pointer that points to the PlayerEntity
-    const BOOL bSuccess = ReadProcessMemory(m_ProcessHandle, m_ModuleBaseAddress + EntityOffsets::PlayerEntity,&m_PlayerEntityAddress, sizeof m_PlayerEntityAddress, nullptr);
+    const BOOL bSuccess = ReadProcessMemory(m_ProcessHandle, m_ModuleBaseAddress + EntityOffsets::LocalPlayerEntity,&m_PlayerEntityAddress, sizeof m_PlayerEntityAddress, nullptr);
 
     if(!bSuccess)
     {
